@@ -15,22 +15,24 @@ playAgainButton.addEventListener("click", (event) =>{
 let selectedBox = null;
 
 function selectBox(box){
-    playerPaper.style.border = "none"
-    playerRock.style.border = "none"
-    playerScissors.style.border = "none"
+    playerPaper.style.border = "1px solid gray"
+    playerRock.style.border = "1px solid gray"
+    playerScissors.style.border = "1px solid gray"
 
     box.style.border = "2px solid black"
 
     selectedBox = box
 }
 function winOrLose(win){
-    if (win.textContent === "rock" && computerWeapon === "paper" || win.textContent === "scissors" && computerWeapon === "rock" || win.textContent === "paper" && computerWeapon === "scissors") {
-        return "You lose, you chose " + win.textContent + " and the computer had " + computerWeapon +"." 
+    if (win.id === "rock" && computerWeapon === "paper" || win.id === "scissors" && computerWeapon === "rock" || win.id === "paper" && computerWeapon === "scissors") {
+        endOfGameMessage.className = "lose"
+        return "You lose, you chose " + win.id + " and the computer had " + computerWeapon +"." 
     } else {
-        if (selectedBox.textContent === computerWeapon) {
+        if (selectedBox.id === computerWeapon) {
             return "Draw, you both chose " + computerWeapon +"."
         } else {
-            return "You win! You chose " + win.textContent + " and the computer had " + computerWeapon + "."
+            endOfGameMessage.className = "win"
+            return "You win! You chose " + win.id + " and the computer had " + computerWeapon + "."
         }
     }
 }
