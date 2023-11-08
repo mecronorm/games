@@ -5,6 +5,12 @@ const playerScissors = document.getElementById("scissors");
 const playButton = document.getElementById("play");
 const computerWeapon = weapons[(Math.floor(Math.random()*weapons.length))];
 const endOfGameMessage = document.createElement("p")
+const playAgainButton = document.createElement("button")
+playAgainButton.id = "play-again"
+playAgainButton.textContent = "Play again?"
+playAgainButton.addEventListener("click", (event) =>{
+    location.reload()
+})
 
 let selectedBox = null;
 
@@ -35,11 +41,13 @@ playerScissors.addEventListener("click", () => selectBox(playerScissors))
 
 playButton.addEventListener("click", (event) =>{
     if (selectedBox) {
-        console.log(selectedBox.textContent === computerWeapon)
-        console.log(selectedBox.textContent, computerWeapon)
         endOfGameMessage.textContent = winOrLose(selectedBox)
-        console.log(endOfGameMessage);
+        playerRock.style.display = "none"
+        playerPaper.style.display = "none"
+        playerScissors.style.display = "none"
+        playButton.style.display = "none"
         document.body.children[2].append(endOfGameMessage)
+        document.body.children[2].append(playAgainButton)
     } else {
         alert("please select a box before hitting play")
     }
