@@ -29,6 +29,7 @@ function winOrLose(win){
         return "You lose, you chose " + win.id + " and the computer had " + computerWeapon +"." 
     } else {
         if (selectedBox.id === computerWeapon) {
+            endOfGameMessage.className = "draw"
             return "Draw, you both chose " + computerWeapon +"."
         } else {
             endOfGameMessage.className = "win"
