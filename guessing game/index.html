@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Guess the number!</title>
     <script defer src="script.js"></script>
 </head>
 <body>
@@ -12,7 +12,10 @@
         <p>Can you guess the correct number between 1 and 26?</p>
     </header>
     <main>
-        <label for="number">Your guess here:<input type="text" id="number" name="number"></label>
+        <form id="guess-form">
+            <label for="number">Your guess here:<input type="text" id="number" name="number"></label>
+            <button type="submit">Play</button>
+        </form>
     </main>
 </body>
 </html>
