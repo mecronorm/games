@@ -4,6 +4,8 @@ const hitButton = document.getElementById("hit")
 const standButton = document.getElementById("stand")
 const playerHand = document.getElementById("player-hand")
 const dealerHand = document.getElementById("dealer-hand")
+const dummyDealerCard = document.createElement("img")
+dummyDealerCard.src = "./images/Card_back_01.svg.png"
 
 let deck = new Array();
 suits.forEach(emblem => {
@@ -31,10 +33,7 @@ function drawCard(hand, total){
         }
     }
     articleCard.append(number)
-    const emblem = document.createElement("p")
-    emblem.textContent = drawnCard.suit
     articleCard.className = drawnCard.suit
-    articleCard.append(emblem)
     hand.append(articleCard)
     total = total + +number.classList[0]
     console.log(total);
@@ -90,6 +89,7 @@ function dealersTurn() {
 playerTotal = drawCard(playerHand, playerTotal)
 playerTotal = drawCard(playerHand, playerTotal)
 dealerTotal = drawCard(dealerHand, dealerTotal)
+dealerHand.append(dummyDealerCard)
 
 hitButton.addEventListener("click", (event)=>{
     playerTotal = drawCard(playerHand, playerTotal)
@@ -102,5 +102,6 @@ hitButton.addEventListener("click", (event)=>{
 standButton.addEventListener("click", (event) =>{
     hitButton.style.display = "none"
     standButton.style.display = "none"
+    dummyDealerCard.style.display = "none"
     dealersTurn()
 })

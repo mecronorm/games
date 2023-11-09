@@ -2,4 +2,59 @@ body{
     header{
         text-align: center;
     }
+    main{
+        width: 100%;
+        text-align: center;
+        div{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            h2{
+                width: 100%;
+            }
+            article{
+                border: 2px solid black;
+                border-radius: 10px;
+                width: 100px;
+                height: 150px;
+                margin: 5px;
+            }
+            img{
+                width: 100px;
+                height: 150px;
+                border: 2px solid black;
+                border-radius: 10px;
+                margin: 5px;
+            }
+            .hearts{
+                background-image: url(../images/Heart_corazón.svg.png);
+                background-size: contain; 
+                background-repeat: no-repeat;
+                background-position: bottom;
+            }
+            .clubs{
+                background-image: url(../images/SuitClubs.svg.png);
+                background-size: contain; 
+                background-repeat: no-repeat;
+                background-position: bottom;
+            }
+            .diamonds{
+                background-image: url(../images/1200px-SuitDiamonds.svg.png);
+                background-size: contain; 
+                background-repeat: no-repeat;
+                background-position: bottom;
+            }
+            .spades{
+                background-image: url(../images/SuitSpades.svg.png);
+                background-size: contain; 
+                background-repeat: no-repeat;
+                background-position: bottom;
+            }
+        }
+    }
+    footer{
+        text-align: center;
+    }
 }
