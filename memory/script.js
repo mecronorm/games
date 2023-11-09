@@ -25,7 +25,8 @@ cardsPairs.forEach(card =>{
                 document.body.children[1].getElementsByClassName("is-clicked")[0].classList.remove("is-clicked")
                 points++
             } else {
-
+                document.body.children[1].getElementsByClassName("is-clicked")[0].classList.remove("is-clicked")
+                document.body.children[1].getElementsByClassName("is-clicked")[0].classList.remove("is-clicked")
             }
         }
     })
