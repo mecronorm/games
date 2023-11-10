@@ -1,10 +1,47 @@
 body{
-    main{
-        display: grid;
-        grid-row: 5;
-        grid-template-columns: auto auto auto auto auto;
-        width: 80%;
+    background-image: url(../images/dirt.webp);
+    color: white;
+    header{
+        width: 500px;
+        padding: 5px;
+        border-radius: 75px;
         margin: auto;
+        text-align: center;
+        background-image: url(../images/stone.webp);
+        h1{
+            font-family: 'vt323', monospace;
+            font-size: 35px;
+        }
+        p{
+            font-family: 'vt323', monospace;
+            font-size: 20px;
+        }
+        button{
+            position: fixed;
+            top: 50px;
+            right: 50px;
+            background-color: rgb(81, 45, 186);
+            color: white;
+            font-size: 35px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    }
+    main{
+        div{
+            display: grid;
+            grid-row: 5;
+            grid-template-columns: auto auto auto auto auto;
+            width: 80%;
+            margin: auto;
+        }
+        button:hover{
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.386);
+            cursor: pointer;
+        }
         button{
             width: 200px;
             height: 200px;
@@ -12,6 +49,9 @@ body{
             margin: 10px;
             border: 1px solid black;
             overflow: hidden;
+            background-image: url(../images/M.jpg);
+            background-size: contain;
+            border-radius: 20px;
         }
         img{
             display: none;
@@ -19,6 +59,14 @@ body{
             width: 200px;
             margin: 0;
             padding: 0;
+        }
+        .is-clicked:hover{
+            box-shadow: none;
+            cursor: default;
+        }
+        .is-correct:hover{
+            box-shadow: none;
+            cursor: default;
         }
         .is-clicked{
             img{
@@ -30,5 +78,12 @@ body{
                 display: block;
             }
         }
+        article{
+            display: none;
+        }
+    }
+    footer{
+        display: none;
+        text-align: center;
     }
 }
