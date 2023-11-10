@@ -68,23 +68,29 @@ function shuffle(array) {
     }
     return array;
   }
+
 shuffle(cardsPairs)  
+
 infoButton.addEventListener("click", (event)=> {
     event.target.classList.toggle("active")
     if (event.target.classList.contains("active")) {
         cardsPairs.forEach(card =>{
             card.style.display = "none"
         })
+        document.body.children[2].style.display = "none"
         infoArticle.style.display = "block"
     } else {
         if (points != cardsPairs.length / 2) {  
             cardsPairs.forEach(card => {
                 card.style.display = "block"
-            })
+            }) 
+        } else {
+            document.body.children[2].style.display = "block"
         }
         infoArticle.style.display = "none"
     }
 })
+
 cardsPairs.forEach(card =>{
     card.addEventListener("click", (event) =>{
         if (card.className.includes("is-clicked") || card.className.includes("is-correct")) {

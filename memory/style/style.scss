@@ -16,6 +16,10 @@ body{
             font-family: 'vt323', monospace;
             font-size: 20px;
         }
+        button:hover{
+            background-color: rgb(108, 63, 245);
+            cursor: pointer;
+        }
         button{
             position: fixed;
             top: 50px;
@@ -79,11 +83,37 @@ body{
             }
         }
         article{
+            border-radius: 20px;
+            width: 750px;
+            margin: 200px auto;
+            box-sizing: border-box;
+            padding: 1px 20px;
             display: none;
+            font-family: 'vt323', monospace;;
+            background-image: url(../images/wool.png);
+            color: rgb(87, 87, 87);
+            h2{
+                font-size: 35px;
+            }
+            p{
+                font-size: 20px;
+            }
         }
     }
     footer{
         display: none;
         text-align: center;
+        border-radius: 20px;
+        width: 750px;
+        margin: 200px auto;
+        box-sizing: border-box;
+        padding:  20px;
+        display: none;
+        font-family: 'vt323', monospace;;
+        background-image: url(../images/wool.png);
+        color: rgb(87, 87, 87);
+        h3{
+            font-size: 30px;
+        }
     }
 }
