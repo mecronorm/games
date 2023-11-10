@@ -6,10 +6,42 @@ const cards = [
     {
         name: 2,
         image: "./images/Mycelium_29_JE2_BE2.webp"
+    },
+    {
+        name: 3,
+        image: "./images/wood.jpg"
+    },
+    {
+        name: 4,
+        image: "./images/stonebrick.jpg"
+    },
+    {
+        name: 5,
+        image: "./images/command.jpg"
+    },
+    {
+        name: 6,
+        image: "./images/sand.jpeg"
+    },
+    {
+        name: 7,
+        image: "./images/stone.webp"
+    },
+    {
+        name: 8,
+        image: "./images/woodplank.webp"
+    },
+    {
+        name: 9,
+        image: "./images/awman.webp"
+    },
+    {
+        name: 10,
+        image: "./images/steve.jpg"
     }
 ]
 const cardsPairs = []
-const points = 0
+let points = 0
 cards.forEach(card => {
     const original = document.createElement("button")
     const pair = document.createElement("button")
@@ -41,6 +73,7 @@ cardsPairs.forEach(card =>{
                     document.body.children[1].getElementsByClassName("is-clicked")[0].classList.remove("is-clicked")
                     document.body.children[1].getElementsByClassName("is-clicked")[0].classList.remove("is-clicked")
                     points++
+                    console.log(points);
                 } else {
                     setTimeout(name =>{
                         document.body.children[1].getElementsByClassName("is-clicked")[0].classList.remove("is-clicked")
@@ -53,5 +86,4 @@ cardsPairs.forEach(card =>{
         }
     })
     document.body.children[1].append(card)
-    
 })
